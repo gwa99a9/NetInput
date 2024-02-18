@@ -105,11 +105,11 @@ int main()
 	SendResetControllers();
 	printf("Done.\n");
 
-	printf("Waiting for gamepad input, press ESC to exit...\n");
+	printf("Waiting for gamepad input, press HOME to exit...\n");
 	memset(lastSentInputStates, 0, sizeof(lastSentInputStates));
 	while (true)
 	{
-		if (GetKeyState(VK_ESCAPE) & 0x8000)
+		if (GetKeyState(VK_HOME) & 0x8000)
 			break;
 
 		PollControllers();
